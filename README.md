@@ -1,11 +1,11 @@
-# M1-S1-HTML-DevinHouse
+# M1-S2-JS-DevinHouse
 
-#### Utilizando estrutura condicional **exiba** a descrição da classificação da **idade** da pessoa de acordo com os dados abaixo:
+#### Utilizando estrutura de repetição realize a tabuada do número x e exiba ela da seguinte forma:
+2 x 0 = 0
+2 x 1 = 2
+....
+2 x 10 = 20
 
-#### Jovens - Indivíduos de até 15 anos;
-#### Adultos - Indivíduos com idade entre 16 até 64 anos;
-#### Idosos - Indivíduos de 65 anos em diante.
-
-#### Utilize prompt para solicitar a idade e alert para exibir a classificação.
+#### O número para realizar a tabuada deve ser solicitado via prompt e o resultado apresentado via alert.
 
 #### Realize o commit do exercício resolvido.
