@@ -1,21 +1,21 @@
+let soma = 0;
 while (true) {
   let numero = prompt(
-    "Coloque o numero para a tabuada. ou escreva PARE para parar"
+    "Coloque o numero para a soma. ou escreva -1 para parar"
   );
 
-  if (numero.toUpperCase() === "PARE") {
-    alert("O programa parou.");
+  if (numero == -1) {
+    alert("A soma dos numero e : " + soma);
     break;
   } else {
     numero = Number(numero);
   }
 
   if (isNaN(numero)) {
-    alert("Numero invalida tente novamente.");
+    alert("Numero invalido tente novamente.");
     continue;
   }
 
-  for (let i = 0; i <= 10; i++) {
-    alert(numero + " x " + i + " = " + numero * i);
-  }
+  soma += numero 
+  
 }

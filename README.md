@@ -1,11 +1,5 @@
 # M1-S2-JS-DevinHouse
 
-#### Utilizando estrutura de repetição realize a tabuada do número x e exiba ela da seguinte forma:
-2 x 0 = 0
-2 x 1 = 2
-....
-2 x 10 = 20
-
-#### O número para realizar a tabuada deve ser solicitado via prompt e o resultado apresentado via alert.
+#### Utilizando estrutura de repetição, some os números digitados através do prompt enquanto o número for diferente de -1, quando digitado -1 pare de exibir o prompt e exiba através de um alert o resultado da soma dos números digitados.
 
 #### Realize o commit do exercício resolvido.
