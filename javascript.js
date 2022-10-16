@@ -1,7 +1,7 @@
 while (true) {
   let idade = prompt("Coloque a sua idade. ou escreva PARE para parar");
 
-  if (idade.toUpperCase == "PARE") {
+  if (idade.toUpperCase() === "PARE") {
     alert("O programa parou.");
     break;
   } else {
