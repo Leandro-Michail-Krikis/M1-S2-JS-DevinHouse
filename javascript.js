@@ -1,17 +1,18 @@
-var numerosPrimos = 0;
+while (true) {
+  const inicio = Number(prompt("Numero inicial"));
+  const raiz = Number(prompt("raiz"));
+  let ultimoPA = 1;
+  let resultado = "1";
 
-for (let numero = 2; numero <= 1000; numero++) {
-  let primo = true;
-  for (let subNumeros = 2; subNumeros < numero; subNumeros++) {
-    // Se tiver um numero entre ele e um menor do que ele, ele nao e um numero primo
-    if (numero % subNumeros === 0) {
-      primo = false;
-    }
+  if (isNaN(inicio) || isNaN(raiz)) {
+    alert("Entradas invalidas.");
+    continue;
   }
-  if (primo) {
-    numerosPrimos++
-    console.log(numero);
+
+  for (let i = 1; i < 10; i++) {
+    ultimoPA += raiz;
+    resultado += ", " + ultimoPA.toString();
   }
+
+  alert("resultado: " + resultado);
 }
-
-console.log("O total de numeros primos ate o 1000 e: " + numerosPrimos);
