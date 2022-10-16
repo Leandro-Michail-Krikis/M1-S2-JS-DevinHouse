@@ -1,38 +1,28 @@
 while (true) {
-  const calculosValidos = ["+", "-", "*", "/"];
-  const calculo = prompt(
-    "qual o tipo de cálculo deseja fazer (“+”, “-”, “*” ou “/”)"
-  );
-  const primeiroNumero = Number(prompt("Coloque o primeiro Numero"));
-  const segundoNumero = Number(prompt("Coloque o segundo Numero"));
+  let dia = Number(prompt("Coloque o dia em forma de numero. (1-31)"));
+  let mes = Number(prompt("Coloque o mes em forma de numero. (1-12)"));
+  const dataDeEntrada = new Date(null, mes - 1, dia).getTime();
+
+  const inicioOutono = new Date(null, 3 - 1, 22).getTime();
+  const inicioInverno = new Date(null, 06 - 1, 22).getTime();
+  const inicioPrimavera = new Date(null, 09 - 1, 22).getTime();
+  const fimPrimavera = new Date(null, 12 - 1, 21).getTime();
   let resultado;
 
-  if (
-    isNaN(primeiroNumero) ||
-    isNaN(segundoNumero) ||
-    calculosValidos.indexOf(calculo) == -1
-  ) {
+  if (isNaN(mes) || isNaN(dia)) {
     alert("dados invalidos tente novamente.");
     continue;
   }
 
-  switch (calculo) {
-    case "+":
-      resultado = primeiroNumero + segundoNumero;
-      break;
-
-    case "-":
-      resultado = primeiroNumero - segundoNumero;
-      break;
-
-    case "*":
-      resultado = primeiroNumero * segundoNumero;
-      break;
-
-    case "/":
-      resultado = primeiroNumero / segundoNumero;
-      break;
+  if (dataDeEntrada >= inicioOutono && dataDeEntrada < inicioInverno) {
+    resultado = "Outono"
+  } else if (dataDeEntrada >= inicioInverno && dataDeEntrada < inicioPrimavera) {
+    resultado = "Inverno"
+  } else if (dataDeEntrada >= inicioPrimavera && dataDeEntrada <= fimPrimavera) {
+    resultado = "Primavera"
+  } else {
+    resultado = "Verão"
   }
-  alert("O resultado do seu cálculo é: " + resultado)
-  break;
+
+  alert("A estação atual é " + resultado)
 }

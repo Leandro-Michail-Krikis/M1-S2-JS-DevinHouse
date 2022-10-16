@@ -1,10 +1,10 @@
 # M1-S2-JS-DevinHouse
 
-Faça 3 prompts ao usuário:
-1. no primeiro, pergunte qual o tipo de cálculo ele deseja fazer (“+”, “-”, “*” ou “/”);
-2. no segundo, pergunte o primeiro valor que deseja calcular;
-3. no terceiro, o segundo valor que deseja calcular.
-
-Em seguida, realize o cálculo e exiba na tela um “alert” contendo o texto “O resultado do seu cálculo é: X”, onde X é o resultado final do cálculo solicitado pelo usuário.
+Baseado na data atual, seu código deve verificar qual a estação atual do ano no hemisfério sul, exibindo através de um alert a estação atual.
+Considere:
+- 22/12 a 21/03 - Verão;
+- 22/03 a 21/06 - Outono;
+- 22/06 a 21/09 - Inverno;
+- 22/09 a 21/12 - Primavera.
 
 Realize o commit do exercício resolvido.
