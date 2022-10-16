@@ -1,29 +1,38 @@
 while (true) {
-  let numero = prompt("Coloque um numero. ou escreva PARE para parar");
+  const calculosValidos = ["+", "-", "*", "/"];
+  const calculo = prompt(
+    "qual o tipo de cálculo deseja fazer (“+”, “-”, “*” ou “/”)"
+  );
+  const primeiroNumero = Number(prompt("Coloque o primeiro Numero"));
+  const segundoNumero = Number(prompt("Coloque o segundo Numero"));
+  let resultado;
 
-  if (numero.toUpperCase() == "PARE") {
-    alert("O Programa parou");
-    break;
-  } else {
-    numero = parseInt(numero);
-  }
-
-  if (isNaN(numero)) {
-    alert("Numero invalido tente novamente.");
+  if (
+    isNaN(primeiroNumero) ||
+    isNaN(segundoNumero) ||
+    calculosValidos.indexOf(calculo) == -1
+  ) {
+    alert("dados invalidos tente novamente.");
     continue;
   }
 
-  if (numero % 2 == 0) {
-    let numerosImpares = numero / 2;
-    let numerosPares = numero / 2 + 1;
-    alert(
-      `O ${numero} tem ${numerosPares} numeros par e ${numerosImpares} numeros impar`
-    );
-  } else {
-    let numerosImpares = (numero + 1) / 2;
-    let numerosPares = (numero + 1) / 2;
-    alert(
-      `Entre 0 e ${numero} tem ${numerosPares} numeros par e ${numerosImpares} numeros impar`
-    );
+  switch (calculo) {
+    case "+":
+      resultado = primeiroNumero + segundoNumero;
+      break;
+
+    case "-":
+      resultado = primeiroNumero - segundoNumero;
+      break;
+
+    case "*":
+      resultado = primeiroNumero * segundoNumero;
+      break;
+
+    case "/":
+      resultado = primeiroNumero / segundoNumero;
+      break;
   }
+  alert("O resultado do seu cálculo é: " + resultado)
+  break;
 }
