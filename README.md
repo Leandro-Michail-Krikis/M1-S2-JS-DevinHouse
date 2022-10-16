@@ -1,4 +1,4 @@
-# M1-S1-HTML-DevinHouse
+# M1-S2-JS-DevinHouse
 
 #### Utilizando estrutura condicional **exiba** a descrição da classificação da **idade** da pessoa de acordo com os dados abaixo:
 
